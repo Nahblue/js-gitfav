@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Aplicação onde o usuário busca e favorita outros usuários do github.
 
-- [Visite o projeto online]()
+- [Visite o projeto online](https://js-gitfav.vercel.app/)
 
 ## :memo: Licença
 
