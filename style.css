@@ -106,19 +106,6 @@ header {
 .table-container {
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-
-  max-height: 60rem;
-  overflow-y: scroll;
-}
-
-.table-container::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 1rem;
-}
-
-.table-container::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-  background: var(--border-color);
 }
 
 table {
@@ -129,6 +116,13 @@ table {
 table * {
   font-size: 2rem;
   color: var(--text-color);
+}
+
+thead,
+tbody tr {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
 }
 
 table th {
@@ -148,12 +142,30 @@ table th:last-child {
   border-top-right-radius: 1.1rem;
 }
 
+tbody {
+  display: block;
+  max-height: 55rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+tbody::-webkit-scrollbar {
+  width: 7px;
+  height: 120px;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--th-color);
+}
+
+
 table tr:nth-child(even) {
   background-color: var(--secondary-color);
 }
 
 table td {
-  padding: 2.4rem 2.4rem 2.4rem 4rem;
+  padding: 2.4rem 0 2.4rem 4rem;
   text-align: left;
 
   font-size: 2rem;
